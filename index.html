@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DisasterDash-AI-Based Disaster Management System</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1><i class="fas fa-shield-alt"></i> DisasterDash</h1>
+            <nav>
+                <ul>
+                    <li><a href="#home"><i class="fas fa-home"></i> Home</a></li>
+                    <li><a href="#predictions"><i class="fas fa-chart-line"></i> Predictions</a></li>
+                    <li><a href="#response"><i class="fas fa-hands-helping"></i> Response</a></li>
+                    <li><a href="#resources"><i class="fas fa-book"></i> Resources</a></li>
+                </ul>
+            </nav>
+            <div class="header-controls">
+                <div id="weather-widget">Loading weather...</div>
+                <button id="dark-mode-toggle"><i class="fas fa-moon"></i></button>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <section id="home" class="card">
+            <h2>Welcome to the Disaster Management System</h2>
+            <p>                
+                Welcome to DisasterDash, your essential partner in preparing for, responding to, and recovering from emergencies and disasters. Harnessing the power of cutting-edge technology, including artificial intelligence (AI), we are dedicated to ensuring your safety and resilience in the face of adversity. Our platform leverages AI algorithms to analyze vast amounts of data, from weather patterns and seismic activity to social media trends and infrastructure vulnerabilities. This predictive capability allows us to anticipate and mitigate risks more effectively, providing early warnings and actionable insights to communities and organizations worldwide. Explore our resources, expert advice, and innovative tools designed to empower you to make informed decisions and navigate crises with confidence.</p>
+        </section>
+
+        <section id="predictions" class="card">
+            <h2>Current Predictions</h2>
+            <div id="map"></div>
+            <div id="prediction-details"></div>
+        </section>
+
+        <section id="response" class="card">
+            <h2>Response Strategies</h2>
+            <div id="response-recommendations"></div>
+        </section>
+
+        <section id="resources" class="card">
+            <h2>Emergency Resources</h2>
+            <div class="resource-grid">
+                <div class="resource-item">
+                    <i class="fas fa-phone"></i>
+                    <h3>Emergency Contact</h3>
+                    <p>911</p>
+                </div>
+                <div class="resource-item">
+                    <i class="fas fa-home"></i>
+                    <h3>Local Shelters</h3>
+                    <p>Find nearby safe locations</p>
+                </div>
+                <div class="resource-item ">
+                    <i class="fas fa-route"></i>
+                    <h3>Evacuation Routes</h3>
+                    <p>Plan your safe exit</p>
+                </div>
+                <div class="resource-item">
+                    <i class="fas fa-medkit"></i>
+                    <h3>First Aid</h3>
+                    <p>Essential medical information</p>
+                </div>
+            </div>
+        </section>
+        <section id="historical-data" class="card" data-aos="fade-up">
+            <h2>Historical Disaster Data</h2>
+            <canvas id="disaster-chart"></canvas>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 AI-Based Disaster Management System. All rights reserved.</p>
+            <nav>
+                <ul>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#privacy">Privacy Policy</a></li>
+                    <li><a href="#terms">Terms of Service</a></li>
+                </ul>
+            </nav>
+        </div>
+    </footer>
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
